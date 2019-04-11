@@ -30,7 +30,7 @@ To install, download or clone the repo, then:
 
 `truffle.cmd test`
 
-![Testing](images/testing.png)
+![Testing](images/testing.PNG)
 
 ## Deployment
  1. Create an account in Infura
@@ -92,7 +92,7 @@ contract address(SolnSquareVerifier):    0x060A7bb346046d36d9Dc2a5154b27A1774D01
 contract address(SquareVerifier):       0x3Afa0Dc0b2071a56e37496c8Cf1F108BBd546666
 StoreFront: https://rinkeby.opensea.io/assets/realestateonblockchain
 
-![Storefront](images/openSeaStorefront.png)
+![Storefront1](images/openseaStorefront.png)
 
 Some demo transactions sale/purchase
 ![Storefront](images/tokenTransfer2.png)
