@@ -89,12 +89,15 @@ https://rinkeby.opensea.io/assets/0x060A7bb346046d36d9Dc2a5154b27A1774D014A3/7
 
 # Project Notes and Links
 contract address(SolnSquareVerifier):    0x060A7bb346046d36d9Dc2a5154b27A1774D014A3
+
 contract address(SquareVerifier):       0x3Afa0Dc0b2071a56e37496c8Cf1F108BBd546666
+
 StoreFront: https://rinkeby.opensea.io/assets/realestateonblockchain
 
 ![Storefront1](images/openseaStorefront.png)
 
 Some demo transactions sale/purchase
+
 ![Storefront](images/tokenTransfer2.png)
 
 # Project Resources
