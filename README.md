@@ -97,6 +97,7 @@ StoreFront: https://rinkeby.opensea.io/assets/realestateonblockchain
 ![Storefront1](images/openseaStorefront.png)
 
 Some demo transactions sale/purchase
+(https://rinkeby.etherscan.io/token/0x060a7bb346046d36d9dc2a5154b27a1774d014a3?a=0x67f2e20ea36458f311ea5d534e9c0d3d9453e778)
 
 ![Storefront](images/tokenTransfer2.png)
 
