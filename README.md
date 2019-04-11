@@ -77,7 +77,7 @@ npm run dev
 
 To view dapp
 
-`http://localhost:8000`
+`http://localhost:3000`
 
 ![Dapp page](images/htmlPage.png)
 
