@@ -30,7 +30,7 @@ To install, download or clone the repo, then:
 
 `truffle.cmd test`
 
-![Testing](images/testing.PNG)
+![Testing](images/testingCopy.PNG)
 
 ## Deployment
  1. Create an account in Infura
