@@ -52,6 +52,8 @@ function AddSolution(address _to,uint _tokenId,bytes32 key)
     emit SolutionAdded(_tokenId,_to);
 }
 
+
+
 function CanMintToken(address _to,uint _tokenId,
             uint[2] memory a,
             uint[2] memory a_p,
@@ -63,14 +65,15 @@ function CanMintToken(address _to,uint _tokenId,
             uint[2] memory k,
             uint[2] memory input)
             public
-            returns(bool)
+            
 {
+     // check if solution is valid
+    require(verifierContract.verifyTx(a, a_p, b, b_p, c, c_p, h, k, input), "solution not valid");
     bytes32 key = keccak256(abi.encodePacked(a,a_p,b,b_p,c,c_p,h,k,input));
-    
-    if (uniqueSolutions[key].tokenId != _tokenId)
-    return true;
-    else
-    return false;
+    require(uniqueSolutions[key].to == address(0),"Solution already used.");    
+       
+    AddSolution(_to,_tokenId,key);
+      
 }
 
 //  Create a function to mint new NFT only after the solution has been verified
@@ -89,7 +92,7 @@ function mintToken(address _to,uint _tokenId,
             public
 {
     bytes32 key = keccak256(abi.encodePacked(a,a_p,b,b_p,c,c_p,h,k,input));
-    require(uniqueSolutions[key].tokenId != _tokenId,"Solution already exists");
+    require(uniqueSolutions[key].to == address(0),"Solution already used.");
     require(verifierContract.verifyTx(a,a_p,b,b_p,c,c_p,h,k,input)," solution not valid");
     
     AddSolution(_to,_tokenId,key);
@@ -100,19 +103,7 @@ function mintToken(address _to,uint _tokenId,
 
 }
 
-/* contract  SquareVerifier{
-    function verifyTx(
-            uint[2] memory a,
-            uint[2] memory a_p,
-            uint[2][2] memory b,
-            uint[2] memory b_p,
-            uint[2] memory c,
-            uint[2] memory c_p,
-            uint[2] memory h,
-            uint[2] memory k,
-            uint[2] memory input
-        ) public returns (bool r);
-} */
+
 
 
 
